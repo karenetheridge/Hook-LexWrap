@@ -15,7 +15,10 @@ no warnings 'redefine';
 	my $i=1;
 	my $name_cache;
 	while (1) {
-		my @caller = CORE::caller($i++);
+		my @caller = CORE::caller() eq 'DB'
+			? do { package	# line break to foil [Git::Describe]
+				DB; CORE::caller($i++) }
+			: CORE::caller($i++);
 		return if not @caller;
 		$caller[3] = $name_cache if $name_cache;
 		$name_cache = $caller[0] eq 'Hook::LexWrap' ? $caller[3] : '';
