@@ -5,7 +5,7 @@ package Hook::LexWrap;
 # ABSTRACT: Lexically scoped subroutine wrappers
 # KEYWORDS: subroutine function modifier wrapper lexical scope
 
-our $VERSION = '0.26';
+our $VERSION = '0.27';
 
 use Carp ();
 
