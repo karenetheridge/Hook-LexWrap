@@ -1,4 +1,4 @@
-Revision history for Hook-Lex-Wrap
+Revision history for Hook-LexWrap
 
 {{$NEXT}}
         - properly wrap CORE::caller for @DB::args (RT#103186, Максим Лубянов)
