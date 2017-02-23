@@ -93,7 +93,8 @@ sub wrap (*@) {  ## no critic Prototypes
 	return bless sub{ $unwrap=1 }, 'Hook::LexWrap::Cleanup';
 }
 
-package Hook::LexWrap::Cleanup;
+package  # hide from PAUSE
+	Hook::LexWrap::Cleanup;
 
 sub DESTROY { $_[0]->() }
 use overload 
