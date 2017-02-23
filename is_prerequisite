@@ -1,3 +1,6 @@
+Note: this list is probaby *very* out of date now!! it should probably be
+removed.
+
 primary:
 Class::Accessor::Named Acme::ComeFrom DB::Pluggable Sub::MicroSig Sub::WrapPackages Test::SubCalls Test::TestCoverage Test::UniqueTestNames
 
