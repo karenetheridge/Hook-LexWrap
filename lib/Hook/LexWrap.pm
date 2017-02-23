@@ -14,7 +14,8 @@ no warnings 'redefine';
 	my $i=1;
 	my $name_cache;
 	while (1) {
-		my @caller = CORE::caller($i++) or return;
+		my @caller = CORE::caller($i++);
+		return if not @caller;
 		$caller[3] = $name_cache if $name_cache;
 		$name_cache = $caller[0] eq 'Hook::LexWrap' ? $caller[3] : '';
 		next if $name_cache || $height-- != 0;
