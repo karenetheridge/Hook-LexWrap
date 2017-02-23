@@ -3,6 +3,7 @@ use warnings;
 package Hook::LexWrap;
 # vi: noet sts=8 sw=8 ts=8 :
 # ABSTRACT: Lexically scoped subroutine wrappers
+# KEYWORDS: subroutine function modifier wrapper lexical scope
 
 our $VERSION = '0.26';
 
