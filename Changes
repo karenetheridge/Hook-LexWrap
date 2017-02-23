@@ -1,6 +1,6 @@
 Revision history for Hook-LexWrap
 
-{{$NEXT}}
+0.26    2017-02-23 05:42:34Z
         - properly wrap CORE::caller for @DB::args (RT#103186, Максим Лубянов)
 
 0.25    2014-10-21 02:32:56Z
