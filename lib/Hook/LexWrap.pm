@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package Hook::LexWrap;
+# vi: noet sts=8 sw=8 ts=8 :
 # ABSTRACT: Lexically scoped subroutine wrappers
 
 our $VERSION = '0.26';
@@ -38,7 +39,7 @@ sub wrap (*@) {  ## no critic Prototypes
 		     || *$typeglob{CODE}
 		     || Carp::croak "Can't wrap non-existent subroutine ", $typeglob;
 	}
-        Carp::croak "'$_' value is not a subroutine reference"
+	Carp::croak "'$_' value is not a subroutine reference"
 		foreach grep {$wrapper{$_} && ref $wrapper{$_} ne 'CODE'}
 			qw(pre post);
 	no warnings 'redefine';
